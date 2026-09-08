@@ -66,11 +66,4 @@ public class RegisterServlet extends HttpServlet {
             throw new ServletException("Database error during registration", e);
         }
     }
-
-    // Route GET requests through the same logic as POST, in case the form uses method="get"
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws IOException, ServletException {
-        doPost(req, resp);
-    }
 }
